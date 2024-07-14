@@ -1,5 +1,27 @@
-# This is a H1 header.
-## This is a H2 header.
-### This is a H3 header.
+# Python integrated with Open AI!
+## Use chatGPT directly from your favourite code editor!
+### Getting started...
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+## Task 2: Adding Images
+![Image for getting started](https://octodex.github.com/images/filmtocats.png)
+
+## Task 3: Adding Code samples
+``` python
+ # python scripts
+import openai 
+openai.api_key = 'YOUR_API_KEY'
+messages = [ {"role": "system", "content": 
+			"You are a intelligent assistant."} ] 
+while True: 
+	message = input("Enter the query : ") 
+	if message: 
+		messages.append( 
+			{"role": "user", "content": message}, 
+		) 
+		chat = openai.ChatCompletion.create( 
+			model="gpt-3.5-turbo", messages=messages 
+		) 
+	reply = chat.choices[0].message.content 
+	print(f"ChatGPT: {reply}") 
+	messages.append({"role": "assistant", "content": reply}) 
+```
