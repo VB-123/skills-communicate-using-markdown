@@ -25,3 +25,9 @@ while True:
 	print(f"ChatGPT: {reply}") 
 	messages.append({"role": "assistant", "content": reply}) 
 ```
+
+## Task 4: Making lists
+How to use chatGPT with python?
+- [ ] Head to chatGPT's website and get an API key
+- [ ] Using the pip command install the `openai` package for python.
+- [ ] Use the `import openai` statement to start using chatGPT in your code editor, as in the example above.
